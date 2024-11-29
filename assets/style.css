@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     min-height: 100vh;
     margin: 0;
@@ -6,7 +10,7 @@ html, body {
     
 body {
     position: relative;
-    padding: 0 1rem;
+    padding: 0 1rem 3rem;
     font-size: 1.125rem;
     font-family: Arial, sans-serif;
     color: #9160a2;
@@ -55,7 +59,28 @@ p {
     line-height: 1.5;
 }
 
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
 .column {
     max-width: 600px;
     margin: 3rem auto;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
 }
