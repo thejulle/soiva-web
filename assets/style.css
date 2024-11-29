@@ -21,7 +21,6 @@ html, body {
 body {
     position: relative;
     padding: 0 1rem 2rem;
-    /*font-size: 1.125rem;*/
     font-family: "Geist Mono", monospace;
     letter-spacing: .02em;
     color: var(--white);
@@ -36,6 +35,13 @@ body {
         hsl(0deg 0% 0%) 100%
     );
     background-attachment: fixed;
+}
+
+
+@media (max-width: 767px) {
+    body {
+        font-size: .875rem;
+    }
 }
     
 body::before {
@@ -57,7 +63,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 1.875rem;
+    font-size: 1.375rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 1.75rem;
+    }
 }
 
 p {
@@ -72,8 +84,12 @@ p {
     align-items: center;
     justify-content: center;
     padding: 3rem 2rem;
-    font-size: 1.5rem;
-    /*color: var(--white);*/
+}
+
+@media (min-width: 768px) {
+    .hero {
+        font-size: 1.5rem;
+    }
 }
 
 .hero img {
