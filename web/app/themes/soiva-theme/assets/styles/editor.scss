@@ -1,0 +1,18 @@
+/**
+ * Styles for Gutenberg editor
+ */
+
+// Variables
+$editor: true;
+@import "base/variables";
+
+// Helpers
+@import "base/helper-functions";
+
+.editor-styles-wrapper {
+  // Custom blocks
+  @import "blocks/default";
+  @import "blocks/hero";
+  @import "blocks/contact";
+  @import "blocks/products";
+}

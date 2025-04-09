@@ -1,0 +1,30 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem 0;
+  z-index: 1;
+
+  body.admin-bar & {
+    top: 32px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 1.25rem;
+
+    svg {
+      height: 166px;
+
+      @media (max-width: $max-md) {
+        height: 95px;
+      }
+    }
+  }
+}
+
+#btn-toggle-menu {
+  display: none;
+}

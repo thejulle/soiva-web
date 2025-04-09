@@ -1,0 +1,29 @@
+/**
+ * Inline styles for Gutenberg editor
+ */
+
+// Variables
+$editor: true;
+@import "base/variables";
+
+// Bootstrap
+@import "vendor/bootstrap-init";
+
+// Theme styles
+@import "base/global";
+@import "base/helper-classes";
+@import "base/typography";
+@import "base/buttons";
+
+// Override Gutebenberg's default paragraph styles
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+// Make Gutenberg content area wider
+.wp-block {
+  max-width: 1440px;
+}

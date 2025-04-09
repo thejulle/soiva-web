@@ -1,0 +1,21 @@
+.crumbtrail {
+  margin-bottom: 4rem;
+  font-size: .75rem;
+
+  ol {
+    @extend %list-reset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    &:not(:first-of-type) {
+      padding-left: 2rem;
+      background: url(../images/arrow-orange.svg) .5rem 50% no-repeat; // Add icon
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+  }
+}

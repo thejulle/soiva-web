@@ -1,0 +1,91 @@
+/**
+ * Customized version of Bootstrap 4.0.0
+ * Including:
+ * - CSS Reboot
+ * - Grid, customize: base/_variables.scss
+ * - Font styles, customize: base/_variables.scss
+ */
+
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@import "bootstrap-4.0.0/functions";
+@import "bootstrap-4.0.0/variables";
+
+//
+// Grid mixins
+//
+@import "bootstrap-4.0.0/mixins/breakpoints";
+@import "bootstrap-4.0.0/mixins/border-radius";
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      .col#{$infix}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+    .col#{$infix},
+    .col#{$infix}-auto {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+      .col#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none; // Reset earlier grid tiers
+      }
+
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+    }
+  }
+}
+
+@import "bootstrap-4.0.0/mixins/grid";
+@import "bootstrap-4.0.0/mixins/box-shadow";
+@import "bootstrap-4.0.0/mixins/hover";
+@import "bootstrap-4.0.0/mixins/image";
+@import "bootstrap-4.0.0/mixins/lists";
+@import "bootstrap-4.0.0/mixins/screen-reader";
+@import "bootstrap-4.0.0/reboot";
+@import "bootstrap-4.0.0/type";
+@import "bootstrap-4.0.0/images";
+@import "bootstrap-4.0.0/grid";
+@import "bootstrap-4.0.0/utilities/screenreaders";

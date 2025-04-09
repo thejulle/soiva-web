@@ -1,0 +1,16 @@
+{
+  "name": "hero",
+  "title": "Hero",
+  "description": "Hero",
+  "category": "custom-blocks",
+  "icon": "align-none",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "hero.php"
+  },
+  "supports": {
+    "align": false,
+    "multiple": false
+  }
+}

@@ -1,0 +1,100 @@
+$editor: false !default;
+
+/**
+ * Grid settings
+ */
+
+//$main-sm-columns:       12;
+//$sidebar-sm-columns:    4;
+$grid-gutter-width: 2.5rem;
+
+/**
+ * Grid breakpoint variables
+ */
+$sm: 36rem; // 576px
+$md: 48rem; // 768px
+$lg: 62rem; // 992px
+$xl: 97rem; // 1552px
+
+// CUSTOM GRID STYLES FOR EDITOR
+@if $editor == true {
+  $admin_sidebars: 33.125rem;
+  $sm: $sm + $admin_sidebars;
+  $md: $md + $admin_sidebars;
+  $lg: $lg + $admin_sidebars;
+  $xl: $xl + $admin_sidebars;
+}
+
+$max-sm: $sm - .0625rem;
+$max-md: $md - .0625rem;
+$max-lg: $lg - .0625rem;
+$max-xl: $xl - .0625rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1552px
+);
+
+/**
+ * Colors
+ */
+
+$orange: #FE481B;
+$white: #F4F4F4;
+$gray: #414141;
+$gray-alt: #a0a0a0;
+$black: #121212;
+$black-alt: #0E0E0E;
+
+$font-family-base: "IBM Plex Sans", sans-serif;
+$font-size-base: 1rem;
+// $font-weight-base: 400;
+$line-height-base: 1.5;
+$body-color: $white;
+$body-bg: $black;
+
+/**
+ * Headings
+ */
+
+$h1-font-size: 3.375rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// $headings-font-family: 'Crete Round', Georgia, serif;
+$headings-font-weight: 400;
+$headings-margin-bottom: 1rem;
+$headings-line-height: 1.1;
+
+$lead-font-size: 1.5rem;
+$lead-font-weight: 400;
+
+/**
+ * Links
+ */
+
+$link-color: $white;
+// $link-decoration: none;
+$link-hover-color: $white;
+// $link-hover-decoration: underline;
+
+/**
+ * Horizontal line
+ */
+
+$hr-margin-y: 1.25rem;
+$hr-border-width: 1px;
+$hr-border-color: $black;

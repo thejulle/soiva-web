@@ -1,0 +1,29 @@
+// Variables
+@import "base/variables";
+
+// Bootstrap
+@import "vendor/bootstrap-init";
+
+// Theme styles
+@import "base/global";
+@import "base/helper-classes";
+@import "base/helper-functions";
+@import "base/typography";
+@import "base/accessibility";
+@import "base/buttons";
+@import "base/wp-classes";
+
+@import "layouts/cookies";
+@import "layouts/crumbtrail";
+@import "layouts/entries";
+@import "layouts/footer";
+@import "layouts/forms";
+@import "layouts/header";
+@import "layouts/navigations";
+@import "layouts/some-buttons";
+@import "layouts/teasers";
+
+@import "blocks/default"; // Include default block styles first
+@import "blocks/hero";
+@import "blocks/contact";
+@import "blocks/products";

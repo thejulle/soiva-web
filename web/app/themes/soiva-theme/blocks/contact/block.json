@@ -1,0 +1,15 @@
+{
+  "name": "contact",
+  "title": "Contact",
+  "description": "Contact.",
+  "category": "custom-blocks",
+  "icon": "align-none",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "contact.php"
+  },
+  "supports": {
+    "align": false
+  }
+}

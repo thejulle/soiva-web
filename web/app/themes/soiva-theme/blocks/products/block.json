@@ -1,0 +1,15 @@
+{
+  "name": "products",
+  "title": "Products",
+  "description": "Products.",
+  "category": "custom-blocks",
+  "icon": "align-none",
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "products.php"
+  },
+  "supports": {
+    "align": false
+  }
+}

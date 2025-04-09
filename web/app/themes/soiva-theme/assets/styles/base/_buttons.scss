@@ -1,0 +1,38 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  padding: .4375rem .625rem;
+  font-size: .875rem;
+  color: $white;
+  background: $orange;
+  border: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  padding: .4375rem .625rem;
+  font-size: .75rem;
+  color: $white;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  // &:hover,
+  // &:focus {
+  //   text-decoration: underline;
+  // }
+
+  &.btn-login {
+    border: 1px solid $white;
+    padding: .375rem .625rem;
+  }
+}

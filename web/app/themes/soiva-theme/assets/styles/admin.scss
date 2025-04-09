@@ -1,0 +1,18 @@
+// Highlight ACF's Sync -tab if it's visible
+body.acf-admin-field-groups {
+  .subsubsub {
+    li.sync {
+      a {
+        padding: .2em .5em;
+        color: #fff;
+        font-weight: 700;
+        background: #f00;
+
+        span.count {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+

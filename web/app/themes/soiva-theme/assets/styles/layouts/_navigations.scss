@@ -1,0 +1,38 @@
+.primary-navigation,
+.footer-navigation {
+  ul {
+    @extend %list-reset;
+    display: flex;
+    gap: 15px;
+  }
+
+  li:nth-of-type(3) {
+    a {
+      background: $orange;
+      text-decoration: none;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: .4375rem .625rem;
+    font-size: .75rem;
+  }
+}
+
+// Mobiilinavi
+@media (max-width: $max-md) {
+  .primary-navigation {
+    ul {
+      display: none;
+    }
+  }
+}
+
+.footer-navigation {
+  margin-top: -.25rem;
+
+  ul {
+    flex-direction: column;
+  }
+}

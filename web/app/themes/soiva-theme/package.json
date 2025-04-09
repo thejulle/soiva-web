@@ -1,0 +1,19 @@
+{
+  "name": "soiva-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && node build.js",
+    "prod": "rm -rf dist && node build.js --prod",
+    "watch": "node build.js --watch"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "chokidar": "^4.0.3",
+    "esbuild": "^0.25.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.86.2"
+  }
+}

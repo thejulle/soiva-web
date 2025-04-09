@@ -1,0 +1,26 @@
+@if $editor != true {
+  .block {
+    margin: 6rem 0;
+
+    @media (max-width: $max-sm) {
+      margin: 3rem 0;
+    }
+  }
+
+  .alignfull {
+    margin-left: calc(var(--vw) / -2 + 100% / 2);
+    margin-right: calc(var(--vw) / -2 + 100% / 2);
+    max-width: var(--vw);
+  }
+
+  .alignwide {
+    $align_wide_margin: -3.5rem;
+    margin-left: $align_wide_margin;
+    margin-right: $align_wide_margin;
+
+    @media (max-width: ($xl - ($align_wide_margin * 2) - 4rem)) { // $xl - negative margins - container paddings
+      margin-left: calc(-100vw / 2 + 100% / 2);
+      margin-right: calc(-100vw / 2 + 100% / 2);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+#onetrust-banner-sdk {
+  #onetrust-pc-btn-handler {
+    font-size: 1rem !important;
+    &:focus {
+      outline: 2px solid $blue;
+    }
+  }
+
+  #onetrust-accept-btn-handler, #accept-recommended-btn-handler .onetrust-close-btn-handler{
+    border-radius: 24px !important;
+    font-size: 1rem !important;
+    // padding: 0.8rem 1rem!important;
+    &:focus {
+      outline: 2px solid $blue;
+    }
+  }
+
+  #onetrust-policy-text {
+    font-size: 1rem !important;
+  }
+}
+#accept-recommended-btn-handler, .onetrust-close-btn-handler{
+  border-radius: 24px !important;
+  &:focus {
+    outline: 2px solid $blue !important;
+  }
+}
+#ot-pc-desc {
+  font-size: 1rem !important;
+}

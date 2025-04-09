@@ -1,0 +1,10 @@
+.skip-to-content:focus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-block;
+  padding: .5rem 1rem;
+  background: $black;
+  z-index: 20;
+  color: $white;
+}
